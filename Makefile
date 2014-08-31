@@ -115,7 +115,7 @@ local-catalog-maybe-native:
 # an empty set of link files, so that any installation-wide
 # links or packages are ignored during the base build.
 
-CONFIGURE_ARGS_qq = 
+CONFIGURE_ARGS_qq = $(shell echo $(RACKET_CONFIGURE_ARGS))
 
 SELF_FLAGS_qq = SELF_RACKET_FLAGS="-G `cd ../../../build/config; pwd`"
 
