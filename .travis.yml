@@ -29,7 +29,6 @@ notifications:
   irc: "chat.freenode.net#racket-dev"
   email: 
     recipients: 
-      - samth@racket-lang.org
-      - robby@racket-lang.org
+      - iam@juanfra.info
     on_success: change
 
