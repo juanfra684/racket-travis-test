@@ -4,6 +4,7 @@ os:
   - osx
 env:
   - PATH=./racket/bin:$PATH
+  - PATH=./racket/bin:$PATH CONFIGURE_ARGS_qq="--disable-jit"
 compiler:
   - gcc
   - clang
@@ -11,7 +12,6 @@ compiler:
 script:
   - make CPUS="2" PKGS="racket-test db-test unstable-flonum-lib net-test"
   - racket -f pkgs/racket-pkgs/racket-test/tests/racket/quiet.rktl
-  - racket --no-jit -f pkgs/racket-pkgs/racket-test/tests/racket/quiet.rktl
   - racket pkgs/racket-pkgs/racket-test/tests/racket/contract/all.rkt
   - raco test pkgs/racket-pkgs/racket-test/tests/json/json.rkt
   - raco test pkgs/racket-pkgs/racket-test/tests/file/main.rkt
